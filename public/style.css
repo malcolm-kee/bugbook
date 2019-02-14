@@ -1,0 +1,102 @@
+html,
+body,
+main,
+nav,
+div {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #4267b2;
+  border-bottom: 1px solid #29487d;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 0 8px;
+  height: 42px;
+  position: relative;
+  width: 100%;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 180px auto 280px;
+  background-color: #e9ebee;
+  padding-top: 50px;
+  min-height: 100vh;
+}
+
+.left-column,
+.right-column {
+  padding: 0 8px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+  padding: 0 12px;
+  margin: 8px 0;
+}
+
+.card:first-child {
+  margin-top: 0;
+}
+
+.card-title {
+  padding-top: 8px;
+  color: #365899;
+  font-weight: bold;
+}
+
+.card-content {
+  margin: 6px 0;
+}
+
+.card-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-image {
+  border-radius: 12px;
+  max-height: 350px;
+}
+
+.card-actions {
+  padding: 8px 0;
+  display: flex;
+}
+
+.button {
+  height: 32px;
+  color: #606770;
+  flex: 1 0;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 0 2px;
+  position: relative;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: rgba(29, 33, 41, 0.04);
+}
+
+.button-liked {
+  color: rgb(53, 120, 229);
+}
