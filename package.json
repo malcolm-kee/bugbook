@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A social network that is full of bugs.",
   "scripts": {
+    "start": "webpack-dev-server --open",
     "test": "jest",
     "build": "webpack"
   },
@@ -22,12 +23,21 @@
   },
   "homepage": "https://bugbook.netlify.com/",
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.1.0",
     "prettier": "^1.16.4",
     "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   }
 }

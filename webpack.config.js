@@ -21,6 +21,21 @@ module.exports = {
     publicPath: '/'
   },
   devtool: 'inline-source-map',
+  devServer: {
+    port: 9000
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     new CleanWebpackPlugin(outputPath, { verbose: true }),
     new HtmlWebpackPlugin({
