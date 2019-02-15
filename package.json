@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A social network that is full of bugs.",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "npm run dev",
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack --env.mode production",
+    "dev": "webpack-dev-server --env.mode development --hot --open"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,8 @@
     "prettier": "^1.16.4",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "react": "^16.8.2",
