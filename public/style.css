@@ -9,7 +9,11 @@ div {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.navbar {
+body {
+  background-color: #e9ebee;
+}
+
+.header {
   background-color: #4267b2;
   border-bottom: 1px solid #29487d;
   color: #fff;
@@ -19,7 +23,14 @@ div {
   z-index: 1;
 }
 
-.navbar-container {
+.footer {
+  padding: 16px 8px;
+  background: #000;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.header-container {
   display: flex;
   align-items: center;
   margin: auto;
@@ -30,16 +41,38 @@ div {
 }
 
 .main-container {
-  display: grid;
-  grid-template-columns: 180px auto 280px;
-  background-color: #e9ebee;
-  padding-top: 50px;
+  display: flex;
+  flex-flow: column;
+  padding: 50px 8px 8px;
   min-height: 100vh;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.left-column,
-.right-column {
-  padding: 0 8px;
+.main {
+  order: 2;
+}
+
+.nav-column {
+  order: 3;
+}
+
+.ads-column {
+  order: 1;
+}
+
+@media only screen and (min-width: 930px) {
+  .main-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 180px auto 280px;
+  }
+
+  .main,
+  .nav-column,
+  .ads-column {
+    order: 0;
+  }
 }
 
 .card {
@@ -60,6 +93,17 @@ div {
   font-weight: bold;
 }
 
+.card-small-title {
+  font-size: 0.8rem;
+  padding-bottom: 8px;
+  color: #787878;
+}
+
+.card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .card-content {
   margin: 6px 0;
 }
@@ -77,6 +121,11 @@ div {
 .card-actions {
   padding: 8px 0;
   display: flex;
+}
+
+.ads-card {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .button {

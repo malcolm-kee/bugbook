@@ -5,78 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>BugBook</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <div class="navbar-text">
+    <header class="header">
+      <div class="header-container">
+        <div class="header-text">
           BugBook
         </div>
       </div>
-    </nav>
+    </header>
     <div class="main-container">
-      <div class="left-column">
+      <div class="nav-column">
         There is supposed to be something here. But I don't have time.
       </div>
-      <main>
+      <main class="main">
         <div class="feed">
-          <div class="card">
-            <div class="card-title">Malcolm</div>
-            <div class="card-content">
-              Today is a great day.
+          <article class="card">
+            <div class="card-title">
+              <a
+                href="https://twitter.com/markdalgleish/status/1095424850565378048"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Some Guy in Twitter
+              </a>
             </div>
-            <div class="card-actions">
-              <button type="button" class="button">
-                Like
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-title">Some Guy in Twitter</div>
             <div class="card-content">
-              If you're not mocking out Lodash, can you really call it a unit test?
+              If you're not mocking out Lodash, can you really call it a unit
+              test?
             </div>
             <div class="card-actions">
               <button type="button" class="button button-liked">
                 Like
               </button>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-title">I Am Devloper</div>
+          </article>
+          <article class="card">
+            <div class="card-title">
+              <a
+                href="https://twitter.com/Malcolm_Kee/status/1089108413999505408"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Malcolm Kee
+              </a>
+            </div>
+            <div class="card-content">
+              Ah... I hate listening to myself in recording.
+            </div>
+            <div class="card-actions">
+              <button type="button" class="button">
+                Like
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-title">
+              <a
+                href="https://twitter.com/iamdevloper/status/1081923027644882944"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                I Am Devloper
+              </a>
+            </div>
             <div class="card-content">
               <p>
-                when you visit a site you handed over 6 months ago and the client made some changes
-                themselves
+                when you visit a site you handed over 6 months ago and the
+                client made some changes themselves
               </p>
             </div>
             <div class="card-image-container">
-              <img class="card-image" src="images/picture-after-client.jpg" alt="Ugly images" />
+              <img
+                class="card-image"
+                src="images/picture-after-client.jpg"
+                alt="Ugly images"
+              />
             </div>
             <div class="card-actions">
               <button type="button" class="button">
                 Like
               </button>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-title">Another Guy in Twitter</div>
+          </article>
+          <article class="card">
+            <div class="card-title">
+              <a
+                href="https://twitter.com/iamdevloper/status/1095613605955940353"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                I Am Devloper
+              </a>
+            </div>
             <div class="card-content">
-              Lodash is created to mock underscore.
+              Lodash was created accidentally when someone mocked out Underscore
+              for some unit tests.
             </div>
             <div class="card-actions">
               <button type="button" class="button">
                 Like
               </button>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-title">I Am Devloper</div>
+          </article>
+          <article class="card">
+            <div class="card-title">
+              <a
+                href="https://twitter.com/iamdevloper/status/1096040197215551488"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                I Am Devloper
+              </a>
+            </div>
             <div class="card-content">
               <p>
-                *spends 1 solid hour fixing a spurious css layout bug that only appears one
-                manager's laptop*
+                *spends 1 solid hour fixing a spurious css layout bug that only
+                appears one manager's laptop*
               </p>
               <p>
                 > oh sorry, I had my browser zoomed in to 110%
@@ -87,13 +133,22 @@
                 Like
               </button>
             </div>
-          </div>
+          </article>
         </div>
       </main>
-      <div class="right-column">
-        There is supposed to be ads here. But nobody want to advertise with me.
+      <div class="ads-column">
+        <article class="card ads-card">
+          <div class="card-small-title">
+            Sponsored
+          </div>
+          There is supposed to be ads here. But nobody want to advertise with
+          me.
+        </article>
       </div>
     </div>
+    <footer class="footer">
+      &copy; <span class="year-value"></span> BugBook
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -101,5 +156,6 @@
     ></script>
     <script src="/scripts/analytics.js"></script>
     <script src="/scripts/card.js"></script>
+    <script src="/scripts/date.js"></script>
   </body>
 </html>
