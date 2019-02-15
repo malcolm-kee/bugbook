@@ -1,0 +1,23 @@
+{
+  "name": "bugbook",
+  "version": "1.0.0",
+  "description": "A social network that is full of bugs.",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malcolm-kee/bugbook.git"
+  },
+  "keywords": [
+    "javascript",
+    "bugs",
+    "social network"
+  ],
+  "author": "Malcolm Kee <malcolm.keeweesiong@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malcolm-kee/bugbook/issues"
+  },
+  "homepage": "https://bugbook.netlify.com/"
+}
