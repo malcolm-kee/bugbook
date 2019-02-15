@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A social network that is full of bugs.",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/malcolm-kee/bugbook/issues"
   },
-  "homepage": "https://bugbook.netlify.com/"
+  "homepage": "https://bugbook.netlify.com/",
+  "devDependencies": {
+    "clean-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
 }
