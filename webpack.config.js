@@ -35,6 +35,9 @@ module.exports = ({ mode } = { mode: 'production' }) => {
       resolve: {
         extensions: ['.js', '.jsx']
       },
+      externals: {
+        jquery: 'jQuery'
+      },
       plugins: [
         new CleanWebpackPlugin(outputPath, { verbose: true }),
         new webpack.ProgressPlugin(),

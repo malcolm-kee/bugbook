@@ -1,4 +1,5 @@
 import React from 'react';
+import { appendPost } from './dom-manipulations';
 
 export const MessageForm = () => {
   const [message, setMessage] = React.useState('');
@@ -6,7 +7,9 @@ export const MessageForm = () => {
   const handleSubmit = ev => {
     ev.preventDefault();
 
-    console.log('form submitted!');
+    appendPost(message);
+
+    setMessage('');
   };
 
   return (
