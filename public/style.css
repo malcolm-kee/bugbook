@@ -40,6 +40,16 @@ body {
   width: 100%;
 }
 
+.header-icon-container {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+}
+
+.header-icon {
+  max-width: 100%;
+}
+
 .main-container {
   display: flex;
   flex-flow: column;
