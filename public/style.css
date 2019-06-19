@@ -126,6 +126,8 @@ body {
 .card-image {
   border-radius: 12px;
   max-height: 350px;
+  max-width: 420px;
+  object-fit: cover;
 }
 
 .card-actions {
@@ -209,4 +211,13 @@ body {
   top: 0;
   cursor: pointer;
   z-index: -1;
+}
+
+.load-more-btn {
+  background-color: #fff;
+  display: block;
+  padding: 14px 0 14px 28px;
+  cursor: pointer;
+  color: #90949c;
+  text-decoration: none;
 }

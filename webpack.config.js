@@ -40,7 +40,6 @@ module.exports = ({ mode } = { mode: 'production' }) => {
       },
       plugins: [
         new CleanWebpackPlugin(outputPath, { verbose: true }),
-        new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
           template: 'public/index.html'
         }),
