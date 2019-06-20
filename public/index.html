@@ -11,14 +11,21 @@
   <body>
     <header class="header">
       <div class="header-container">
-        <div class="header-icon-container">
-          <a href="/">
-            <img src="/images/bug.png" class="header-icon" alt="BugBook Icon" />
-          </a>
+        <div class="header-brand">
+          <div class="header-icon-container">
+            <a href="/">
+              <img
+                src="/images/bug.png"
+                class="header-icon"
+                alt="BugBook Icon"
+              />
+            </a>
+          </div>
+          <div class="header-text">
+            BugBook
+          </div>
         </div>
-        <div class="header-text">
-          BugBook
-        </div>
+        <a href="/bugs">Reported Bugs</a>
       </div>
     </header>
     <div class="main-container">
@@ -144,6 +151,7 @@
           <a href="#" role="button" class="load-more-btn">
             <span>More Posts</span>
           </a>
+          <div class="spinner" style="display: none;"></div>
         </div>
       </main>
       <div class="ads-column">

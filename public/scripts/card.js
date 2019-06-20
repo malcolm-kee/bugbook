@@ -28,10 +28,13 @@ $(document).ready(function() {
 
   $('.load-more-btn').on('click', function(e) {
     e.preventDefault();
+    $('.load-more-btn').hide();
+    $('.spinner').show();
 
     $.ajax('/data/posts.json').done(function(cards) {
       setTimeout(() => {
         cards.forEach(appendCard);
+        $('.spinner').hide();
       }, 1000);
     });
   });
