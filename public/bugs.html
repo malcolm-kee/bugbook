@@ -27,25 +27,39 @@
         </div>
       </div>
     </header>
-    <div class="main-container">
-      <div class="nav-column">
-        There is supposed to be something here. But I don't have time.
+    <main class="container">
+      <div id="bugs-container">
+        <div class="spinner"></div>
       </div>
-      <main class="main">
-        <div id="bugs-container">
-          <div class="spinner"></div>
+      <div id="bug-form-container">
+        <div class="card">
+          <form id="bug-form">
+            <div class="card-title">Create Issue</div>
+            <div class="card-content">
+              <div class="form-control">
+                <label for="reportedBy">Your Name</label>
+                <input id="reportedBy" name="reportedBy" required />
+              </div>
+              <div class="form-control">
+                <label for="title">Issue Title</label>
+                <textarea id="title" name="title" required></textarea>
+              </div>
+              <div class="form-control">
+                <label for="status">Status</label>
+                <select id="status" name="status" required>
+                  <option value=""></option>
+                  <option value="New">New</option>
+                  <option value="In Progress">In Progress</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button type="submit" class="btn">Create Issue</button>
+            </div>
+          </form>
         </div>
-      </main>
-      <div class="ads-column">
-        <article class="card ads-card">
-          <div class="card-small-title">
-            Sponsored
-          </div>
-          There is supposed to be ads here. But nobody want to advertise with
-          me.
-        </article>
       </div>
-    </div>
+    </main>
     <footer class="footer">
       &copy; <span class="year-value"></span> BugBook
     </footer>
