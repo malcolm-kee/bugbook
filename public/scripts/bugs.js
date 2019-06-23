@@ -46,7 +46,7 @@ $(function() {
     }, 1000);
   });
 
-  $('#bugs-container').on('click', '.card', function(ev) {
+  $('#bugs-container').on('click', '.card', function() {
     var bugId = $(this).data('bugid');
     var title = $(this).data('title');
     var status = $(this).data('status');

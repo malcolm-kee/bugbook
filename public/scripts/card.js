@@ -1,12 +1,4 @@
 $(document).ready(function() {
-  $('.card-actions .button').on('click', function() {
-    $('.card-actions .button').toggleClass('button-liked');
-  });
-
-  $('#like-all-btn').on('click', function() {
-    $('.card-actions .button').addClass('button-liked');
-  });
-
   function appendCard(card) {
     $('.load-more-btn').before(`
     <article class="card">
@@ -30,16 +22,43 @@ $(document).ready(function() {
     `);
   }
 
-  $('.load-more-btn').on('click', function(e) {
-    e.preventDefault();
-    $('.load-more-btn').hide();
-    $('.spinner').show();
+  var getPosts = (function() {
+    var currentPage = 1;
+    var postPageLimit = 3;
 
-    $.ajax('/data/posts.json').done(function(cards) {
-      setTimeout(() => {
+    return function getPostsCall() {
+      $('.load-more-btn').hide();
+      $('.spinner').show();
+
+      $.get(
+        'https://bugbook-server.herokuapp.com/posts?_page=' +
+          currentPage +
+          '&_limit=' +
+          postPageLimit
+      ).done(function(cards) {
         cards.forEach(appendCard);
         $('.spinner').hide();
-      }, 1000);
-    });
+
+        if (cards.length >= postPageLimit) {
+          currentPage++;
+          $('.load-more-btn').show();
+        }
+      });
+    };
+  })();
+
+  getPosts();
+
+  $('.card-actions .button').on('click', function() {
+    $('.card-actions .button').toggleClass('button-liked');
+  });
+
+  $('#like-all-btn').on('click', function() {
+    $('.card-actions .button').addClass('button-liked');
+  });
+
+  $('.load-more-btn').on('click', function(e) {
+    e.preventDefault();
+    getPosts();
   });
 });
