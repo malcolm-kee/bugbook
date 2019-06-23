@@ -8,9 +8,8 @@ $(document).ready(function() {
         <a href="${post.author.src}">${post.author.name}</a>
         <button class="focus-btn" type="button">...</a>
       </div>
-      <div class="card-content">
-      ${post.post.text}
-      </div>
+      <div class="card-content">${post.post.text &&
+        post.post.text.replace(/\n|\r|\r\n/, '<br />')}</div>
       ${
         post.post.image
           ? `<div class="card-image-container"><img class="card-image" src="${post.post.image.src}" alt="${post.post.image.alt}" /></div>`
@@ -33,9 +32,7 @@ $(document).ready(function() {
     <div>
       <a href="${post.author.src}">${post.author.name}</a>
     </div>
-    <div class="card-content">
-      ${post.post.text}
-    </div>
+    <div class="card-content">${post.post.text}</div>
     ${
       post.post.image
         ? `<div class="card-image-container"><img class="modal-image" src="${post.post.image.src}" alt="${post.post.image.alt}" /></div>`
