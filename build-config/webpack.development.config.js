@@ -6,7 +6,10 @@ const webpack = require('webpack');
 module.exports = () => ({
   devtool: 'inline-source-map',
   devServer: {
-    port: 9000
+    port: 9000,
+    historyApiFallback: {
+      rewrites: [{ from: /^\/bugs/, to: '/bugs.html' }]
+    }
   },
   plugins: [new webpack.ProgressPlugin()]
 });

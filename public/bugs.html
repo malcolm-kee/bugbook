@@ -34,6 +34,7 @@
       <div id="bug-form-container">
         <div class="card">
           <form id="bug-form">
+            <input type="hidden" name="id" id="id" />
             <div class="card-title">Create Issue</div>
             <div class="card-content">
               <div class="form-control">
@@ -42,7 +43,7 @@
               </div>
               <div class="form-control">
                 <label for="title">Issue Title</label>
-                <textarea id="title" name="title" required></textarea>
+                <input id="title" name="title" required></textarea>
               </div>
               <div class="form-control">
                 <label for="status">Status</label>
@@ -54,7 +55,8 @@
               </div>
             </div>
             <div class="card-actions">
-              <button type="submit" class="btn">Create Issue</button>
+              <button type="submit" class="btn">Create</button>
+              <button type="reset" class="btn btn-white">Cancel</button>
             </div>
           </form>
         </div>
