@@ -3,6 +3,10 @@ $(document).ready(function() {
     $('.card-actions .button').toggleClass('button-liked');
   });
 
+  $('#like-all-btn').on('click', function() {
+    $('.card-actions .button').addClass('button-liked');
+  });
+
   function appendCard(card) {
     $('.load-more-btn').before(`
     <article class="card">
