@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const modeConfig = env =>
@@ -39,7 +39,7 @@ module.exports = ({ mode } = { mode: 'production' }) => {
         jquery: 'jQuery'
       },
       plugins: [
-        new CleanWebpackPlugin(outputPath, { verbose: true }),
+        new CleanWebpackPlugin({ verbose: true }),
         new HtmlWebpackPlugin({
           template: 'public/index.html'
         }),
