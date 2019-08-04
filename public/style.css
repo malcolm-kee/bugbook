@@ -89,6 +89,10 @@ main.container {
   padding: 0 4px;
 }
 
+.bug-item {
+  cursor: pointer;
+}
+
 .nav-column {
   order: 3;
 }

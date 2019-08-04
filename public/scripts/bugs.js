@@ -2,7 +2,7 @@ $(function() {
   function appendBug(bug) {
     $('#bugs-container').prepend(`
     <article 
-      class="card" 
+      class="card bug-item" 
       data-bugid="${bug.id}" 
       data-title="${bug.title}"
       data-status="${bug.status}"
