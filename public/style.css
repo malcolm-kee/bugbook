@@ -267,6 +267,10 @@ main.container {
   cursor: pointer;
   color: #90949c;
   text-decoration: none;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
 }
 
 .spinner {
